@@ -14,7 +14,10 @@ let coords = [0.34526854219948844, -0.08028600612870274]
 const canvasContainer = document.querySelector('#canvasContainer')
 
 // Change coordinates when moving mouse
-canvasContainer.onmousemove = function (event) {
+canvasContainer.onmousemove = mouseMoveHandler
+canvasContainer.ontouchmove = mouseMoveHandler
+
+function mouseMoveHandler(event) {
   coords[0] = map_range(event.clientX, 0, size[0], 0.3, 0.4)
   coords[1] = map_range(event.clientY, 0, size[1], 0.3, 0.4)
 
