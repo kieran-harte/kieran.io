@@ -45,8 +45,6 @@ function render() {
       // Fractal Parameters
       let real = coords[0]
       let imaginary = coords[1]
-      // let real = -0.4125492029;
-      // let imaginary = -0.581;
       let maxIterations = 260
       let scale = zoom
       let height = size[1]
