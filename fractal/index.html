@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <title>Fractal</title>
 
-<head>
-	<title>Fractal</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Kieran Harte" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+    />
+    <meta name="theme-color" content="#131a21" />
 
-	<meta charset="utf-8">
-	<meta name="author" content="Kieran Harte">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-	<meta name="theme-color" content="#131a21">
+    <script src="js/gpu-browser.js" charset="utf-8"></script>
+    <script src="js/canvas-gpu.js" charset="utf-8" defer></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/gpu-browser.js" charset="utf-8"></script>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-	<style media="screen">
-		* {
-			margin: 0;
-			padding: 0;
-		}
+      body {
+        min-height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
 
-		body {
-			min-height: 100vh;
-			text-align: center;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-	</style>
-</head>
+  <body>
+    <h1>Fractal Visualization</h1>
+    <p>
+      Move the mouse around to change the fractal and zoom with the scroll
+      wheel.
+    </p>
+    <i>Works best with a <b>dedicated GPU</b>.</i><br /><br />
 
-<body>
-	<h1>Fractal Visualization</h1>
-	<p>Move the mouse around to change the fractal and zoom with the scroll wheel.</p>
-	<i>Works best with a decent <b>dedicated GPU</b>.</i><br><br>
-	<script src="js/canvas-gpu.js" charset="utf-8"></script>
-</body>
-
+    <div id="canvasContainer"></div>
+  </body>
 </html>
