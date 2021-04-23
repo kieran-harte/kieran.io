@@ -14,13 +14,9 @@ var mouseDown
 var displaceDistance
 var circlesArray
 
-var randomOpacity
+var randomOpacity = true
 
 var oldCanvasHeight
-
-$(() => {
-  allcanvas()
-})
 
 function hexToRgb(hex) {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
@@ -38,8 +34,6 @@ function update_circle_count() {
 }
 
 function update_circle_opacity() {
-  randomOpacity = $('#circle_opacity_input').is(':checked')
-
   init()
 }
 
@@ -116,6 +110,10 @@ function allcanvas() {
   init()
   animate()
 }
+
+setTimeout(() => {
+  allcanvas()
+}, 0)
 
 var event_resize = function () {
   if (canvas.height == oldCanvasHeight && canvas.width == window.innerWidth) {

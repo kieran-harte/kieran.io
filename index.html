@@ -32,24 +32,32 @@
     <title>Kieran Harte - Web & Software Developer</title>
 
     <!-- Scripts -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-      charset="utf-8"
-    ></script>
-    <script src="js/canvas.js" charset="utf-8"></script>
+    <script src="js/canvas.js" charset="utf-8" defer></script>
+    <script type="text/javascript" defer>
+      function animateTo(elId) {
+        const el = document.querySelector(`#${elId}`)
+        if (!el) return
+
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          alignToTop: true
+        })
+      }
+    </script>
   </head>
 
   <body>
     <header>
       <nav>
         <ul>
-          <a href="#projects">
+          <a onclick="animateTo('projects')">
             <li>Projects</li>
           </a>
-          <a href="#about">
+          <a onclick="animateTo('about')">
             <li>About</li>
           </a>
-          <a href="#contact">
+          <a onclick="animateTo('contact')">
             <li>Contact</li>
           </a>
         </ul>
@@ -555,20 +563,5 @@
         </li>
       </ul>
     </section>
-
-    <script type="text/javascript">
-      $(
-        (function () {
-          $('#scroll_arrow').click(function () {
-            $('html, body').animate(
-              {
-                scrollTop: $(window).height()
-              },
-              250
-            )
-          })
-        })()
-      )
-    </script>
   </body>
 </html>
