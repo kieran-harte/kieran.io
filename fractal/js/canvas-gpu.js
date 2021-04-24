@@ -12,9 +12,26 @@ const size = [1024, 768]
 let coords = [0.34526854219948844, -0.08028600612870274]
 const canvasContainer = document.querySelector('#canvasContainer')
 
+size[0] = window.innerWidth * 0.9
+size[1] = window.innerHeight * 0.7
+window.onresize = function () {
+  size[0] = window.innerWidth / 2
+  size[1] = window.innerHeight / 2
+
+  requestAnimationFrame(render)
+}
+
 // Change coordinates when moving mouse
 canvasContainer.onmousemove = mouseMoveHandler
-canvasContainer.ontouchmove = mouseMoveHandler
+canvasContainer.ontouchmove = touchMoveHandler
+
+function touchMoveHandler(event) {
+  coords[0] = map_range(event.touches[0].clientX, 0, size[0], 0.3, 0.4)
+  coords[1] = map_range(event.touches[0].clientY, 0, size[1], 0.3, 0.4)
+
+  // Update canvas
+  requestAnimationFrame(render)
+}
 
 function mouseMoveHandler(event) {
   coords[0] = map_range(event.clientX, 0, size[0], 0.3, 0.4)
@@ -91,6 +108,8 @@ function render() {
 
   // Run kernel and show resulting canvas
   let k = kernel(size, zoom, coords)
+  // kernel.canvas.width = size[0]
+  // kernel.canvas.height = size[1]
   canvasContainer.append(kernel.canvas)
 }
 
