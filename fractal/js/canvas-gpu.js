@@ -15,8 +15,8 @@ const canvasContainer = document.querySelector('#canvasContainer')
 size[0] = window.innerWidth * 0.9
 size[1] = window.innerHeight * 0.7
 window.onresize = function () {
-  size[0] = window.innerWidth / 2
-  size[1] = window.innerHeight / 2
+  size[0] = window.innerWidth * 0.9
+  size[1] = window.innerHeight * 0.7
 
   requestAnimationFrame(render)
 }
@@ -26,6 +26,8 @@ canvasContainer.onmousemove = mouseMoveHandler
 canvasContainer.ontouchmove = touchMoveHandler
 
 function touchMoveHandler(event) {
+  event.preventDefault()
+
   coords[0] = map_range(event.touches[0].clientX, 0, size[0], 0.3, 0.4)
   coords[1] = map_range(event.touches[0].clientY, 0, size[1], 0.3, 0.4)
 
@@ -54,62 +56,60 @@ canvasContainer.addEventListener('wheel', function (e) {
   console.log(zoom)
 })
 
+// Kernel for generating canvas
+const kernel = gpu
+  .createKernel(function (size, zoom, coords) {
+    // Fractal Parameters
+    let real = coords[0]
+    let imaginary = coords[1]
+    let maxIterations = 260
+    let scale = zoom
+    let height = size[1]
+    let width = size[0]
+    let ratio_x = 1 / scale
+    let ratio_y = height / width / scale
+    let t_r = 0
+    let t_i = 0
+    let i = 0
+
+    // Adjust zoom function
+    scale = Math.round(Math.pow(scale, 4) * 10) / 10
+
+    let x = this.thread.x
+    x /= width / ratio_x
+    x *= 2
+    x -= 1 * ratio_x
+    x /= scale
+
+    let y = this.thread.y
+    y /= height / ratio_y
+    y *= 2
+    y -= 1 * ratio_y
+    y /= scale
+
+    i = 1
+    while (i < maxIterations && x * x + y * y < 4) {
+      t_r = x * x - y * y + real
+      t_i = 2 * x * y + imaginary
+      x = t_r
+      y = t_i
+
+      i++
+    }
+
+    // color the pixel
+    i /= maxIterations
+
+    this.color(i, i, i, 1)
+  })
+  .setOutput(size)
+  .setGraphical(true)
+  .setOptimizeFloatMemory(true)
+  .setLoopMaxIterations(1000)
+
 function render() {
-  // Kernel for generating canvas
-  const kernel = gpu
-    .createKernel(function (size, zoom, coords) {
-      // Fractal Parameters
-      let real = coords[0]
-      let imaginary = coords[1]
-      let maxIterations = 260
-      let scale = zoom
-      let height = size[1]
-      let width = size[0]
-      let ratio_x = 1 / scale
-      let ratio_y = height / width / scale
-      let t_r = 0
-      let t_i = 0
-      let i = 0
-
-      // Adjust zoom function
-      scale = Math.round(Math.pow(scale, 4) * 10) / 10
-
-      let x = this.thread.x
-      x /= width / ratio_x
-      x *= 2
-      x -= 1 * ratio_x
-      x /= scale
-
-      let y = this.thread.y
-      y /= height / ratio_y
-      y *= 2
-      y -= 1 * ratio_y
-      y /= scale
-
-      i = 1
-      while (i < maxIterations && x * x + y * y < 4) {
-        t_r = x * x - y * y + real
-        t_i = 2 * x * y + imaginary
-        x = t_r
-        y = t_i
-
-        i++
-      }
-
-      // color the pixel
-      i /= maxIterations
-
-      this.color(i, i, i, 1)
-    })
-    .setOutput(size)
-    .setGraphical(true)
-    .setOptimizeFloatMemory(true)
-    .setLoopMaxIterations(1000)
-
   // Run kernel and show resulting canvas
   let k = kernel(size, zoom, coords)
-  // kernel.canvas.width = size[0]
-  // kernel.canvas.height = size[1]
   canvasContainer.append(kernel.canvas)
 }
 
