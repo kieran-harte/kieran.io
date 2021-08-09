@@ -1,0 +1,60 @@
+{
+  "name": "kieran.io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npm start",
+    "start": "parcel serve ./src/app/index.html ./src/images/* ./src/icons/skills/*",
+    "watch": "parcel watch ./src/app/index.html ./src/images/* ./src/icons/skills/*",
+    "build": "parcel build ./src/app/index.html ./src/images/* ./src/icons/skills/*",
+    "serve": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kieran-harte/kieran.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kieran-harte/kieran.io/issues"
+  },
+  "homepage": "https://github.com/kieran-harte/kieran.io#readme",
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@kieranharte/lit-router": "^0.1.1",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "hpp": "^0.2.3",
+    "lit": "^2.0.0-rc.1",
+    "morgan": "^1.10.0",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.15",
+    "@babel/preset-typescript": "^7.13.0",
+    "@parcel/babel-preset-env": "*",
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "@parcel/transformer-typescript-tsc": "*",
+    "parcel": "^2.0.0-beta.2",
+    "parcel-plugin-local-plugins": "^0.0.3",
+    "parcel-transformer-lit-sass": "^0.1.0",
+    "typescript": "^4.2.4"
+  },
+  "alias": {
+    "components": "./src/components",
+    "icons": "./src/icons"
+  }
+}

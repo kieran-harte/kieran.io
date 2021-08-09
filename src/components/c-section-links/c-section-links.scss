@@ -1,0 +1,38 @@
+:host {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  width: 100%;
+
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    max-width: 900px;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 80px;
+      width: auto;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 8px 24px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

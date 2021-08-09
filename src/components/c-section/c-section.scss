@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > .title {
+    text-align: center;
+    padding: 58px 0;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:after,
+    &:before {
+      content: '';
+      width: 100px;
+      height: 2px;
+      margin-top: 6px;
+      position: absolute;
+      background: var(--accent-color, black);
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+    @media screen and (min-width: 500px) {
+      padding: 100px 0 69px;
+
+      &:before {
+        margin-left: -160px;
+        left: auto;
+      }
+
+      &:after {
+        margin-left: 60px;
+        right: auto;
+      }
+    }
+  }
+
+  & > .items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}

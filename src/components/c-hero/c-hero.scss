@@ -1,0 +1,48 @@
+:host {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+
+  * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  c-section-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 28px;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 0;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  c-social-links {
+    margin-top: 48px;
+  }
+
+  #scroll-arrow {
+    position: absolute;
+    bottom: 36px;
+    cursor: pointer;
+  }
+}

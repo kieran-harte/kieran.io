@@ -1,0 +1,16 @@
+a {
+  padding: 4px;
+  margin: 12px 32px;
+  text-decoration: none;
+
+  svg {
+    height: 32px;
+    width: 32px;
+    fill: white;
+    transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
