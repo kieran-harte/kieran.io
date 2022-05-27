@@ -88,3 +88,9 @@
     }
   }
 }
+
+// Outline latest employment
+:host(:last-of-type) {
+	outline: 2px solid #575e7f;
+	outline-offset: 6px;
+}
