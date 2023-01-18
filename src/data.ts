@@ -135,11 +135,11 @@ facilitate creative and interactive musical flow. I used the
 		date: { startEnd: 'October 2021 - Present', duration: '' },
 		role: 'Front End Web Developer',
 		company: 'Oxbotica',
-		description: html`I am currently working as a Front End Web Developer at Oxbotica, a company developing software for autonomous vehicles.
-As part of the Mapping team, I am responsible for <b>designing</b>, <b>developing</b>, and <b>improving web based
+		description: html`I work as a Front End Web Developer at Oxbotica, a company developing software for autonomous vehicles.
+As part of the Mapping team, I am responsible for <b>designing</b>, <b>developing</b>, and <b>maintaining web based
 	tools</b> to build the maps
 which vehicles use for localisation.`,
-		tags: ['React', 'Typescript'],
+		tags: ['React', 'Typescript', 'WebGL'],
 	},
 ]
 
