@@ -13,7 +13,7 @@ export class CAboutMe extends LitElement {
 	render() {
 		return html`<p>I have a degree in Creative Computing (Web Technologies) from Bath Spa University and I'm currently building web apps
 	as
-	a front end developer at <a href="https://www.oxbotica.com/">Oxbotica</a> 🚙</p>
+	a front end developer at <a href="https://www.oxa.tech/">Oxa</a> 🚙</p>
 <br />
 <p>I am passionate about:</p>
 <ul>

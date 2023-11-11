@@ -131,14 +131,13 @@ facilitate creative and interactive musical flow. I used the
 		tags: ['C++', 'JUCE'],
 	},
 	{
-		logo: { src: './images/oxbotica.png', alt: 'Oxbotica logo' },
+		logo: { src: './images/oxa.png', alt: 'Oxa logo' },
 		date: { startEnd: 'October 2021 - Present', duration: '' },
 		role: 'Front End Web Developer',
-		company: 'Oxbotica',
-		description: html`I work as a Front End Web Developer at Oxbotica, a company developing software for autonomous vehicles.
+		company: 'Oxa',
+		description: html`I work as a Front End Web Developer at Oxa, a company developing software for autonomous vehicles.
 As part of the Mapping team, I am responsible for <b>designing</b>, <b>developing</b>, and <b>maintaining web based
-	tools</b> to build the maps
-which vehicles use for localisation.`,
+	tools</b> to build the maps which autonomous vehicles use for localisation.`,
 		tags: ['React', 'Typescript', 'WebGL'],
 	},
 ]
