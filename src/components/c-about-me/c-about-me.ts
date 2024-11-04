@@ -19,7 +19,7 @@ export class CAboutMe extends LitElement {
 <ul>
 	<li>Using web technologies to create native feeling web apps</li>
 	<li>
-		Creating resuable web components (especially with
+		Creating reusable web components (especially with
 		<a href="https://lit.dev">Lit</a>)
 	</li>
 	<li>Self teaching and lifelong learning</li>
