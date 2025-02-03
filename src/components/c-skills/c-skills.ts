@@ -1,7 +1,7 @@
 import { html, LitElement } from 'lit'
-import { customElement, property } from 'lit/decorators'
-import s from 'litsass:./c-skills.scss'
+import { customElement, property } from 'lit/decorators.js'
 import { Skill } from 'src/types'
+import s from './c-skills.scss'
 
 @customElement('c-skills')
 export class CSkills extends LitElement {
@@ -12,7 +12,7 @@ export class CSkills extends LitElement {
   render() {
     return html`
       ${this.skills.map(
-        (skill) => html`
+        skill => html`
           <div class="skill"><img src=${skill.icon} />${skill.name}</div>
         `
       )}

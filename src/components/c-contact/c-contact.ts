@@ -1,8 +1,8 @@
-import email from 'icons/email'
-import phone from 'icons/phone'
 import { html, LitElement } from 'lit'
-import { customElement } from 'lit/decorators'
-import s from 'litsass:./c-contact.scss'
+import { customElement } from 'lit/decorators.js'
+import email from '../../../public/icons/email'
+import phone from '../../../public/icons/phone'
+import s from './c-contact.scss'
 
 @customElement('c-contact')
 export class CContact extends LitElement {

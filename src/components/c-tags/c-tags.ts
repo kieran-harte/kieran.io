@@ -1,7 +1,7 @@
-import tag from 'icons/tag'
 import { html, LitElement, nothing } from 'lit'
-import { customElement, property } from 'lit/decorators'
-import s from 'litsass:./c-tags.scss'
+import { customElement, property } from 'lit/decorators.js'
+import tag from '../../../public/icons/tag'
+import s from './c-tags.scss'
 
 @customElement('c-tags')
 export class CTags extends LitElement {
@@ -15,7 +15,7 @@ export class CTags extends LitElement {
         ? html`
             ${tag}
             <div class="tags">
-              ${this.tags.map((tag) => html`<div class="tag">${tag}</div>`)}
+              ${this.tags.map(tag => html`<div class="tag">${tag}</div>`)}
             </div>
           `
         : nothing}

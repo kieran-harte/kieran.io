@@ -1,9 +1,9 @@
-import codepen from 'icons/codepen'
-import github from 'icons/github'
-import linkedin from 'icons/linkedin'
 import { html, LitElement } from 'lit'
-import { customElement } from 'lit/decorators'
-import s from 'litsass:./c-social-links.scss'
+import { customElement } from 'lit/decorators.js'
+import codepen from '../../../public/icons/codepen'
+import github from '../../../public/icons/github'
+import linkedin from '../../../public/icons/linkedin'
+import s from './c-social-links.scss'
 
 @customElement('c-social-links')
 export class CSocialLinks extends LitElement {

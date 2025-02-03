@@ -1,10 +1,10 @@
 import { html, LitElement } from 'lit'
-import { customElement } from 'lit/decorators'
-import s from 'litsass:./c-section-links.scss'
+import { customElement } from 'lit/decorators.js'
+import s from './c-section-links.scss'
 
 @customElement('c-section-links')
 export class CSectionLinks extends LitElement {
-  static styles = [s]
+  static styles = s
 
   constructor() {
     super()

@@ -1,13 +1,13 @@
-import 'components/c-section-links'
-import 'components/c-social-links'
-import downArrow from 'icons/downArrow'
 import { html, LitElement } from 'lit'
-import { customElement } from 'lit/decorators'
-import s from 'litsass:./c-hero.scss'
+import { customElement } from 'lit/decorators.js'
+import downArrow from '../../../public/icons/downArrow'
+import '../c-section-links'
+import '../c-social-links'
+import styles from './c-hero.scss'
 
 @customElement('c-hero')
 export class CHero extends LitElement {
-  static styles = [s]
+  static styles = styles
 
   constructor() {
     super()
@@ -17,7 +17,7 @@ export class CHero extends LitElement {
     return html`
       <c-section-links></c-section-links>
       <h1>Kieran Harte</h1>
-      <h2>Full Stack Web Developer</h2>
+      <h2>Senior Web Developer</h2>
       <c-social-links></c-social-links>
       <div
         id="scroll-arrow"
@@ -26,7 +26,7 @@ export class CHero extends LitElement {
             .querySelector('app-root')
             ?.shadowRoot?.querySelector(`c-section[heading="Projects"]`)
             ?.scrollIntoView({
-              behavior: 'smooth',
+              behavior: 'smooth'
             })
         }}
       >

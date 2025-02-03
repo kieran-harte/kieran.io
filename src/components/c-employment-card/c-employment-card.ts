@@ -1,9 +1,9 @@
-import 'components/c-tags'
-import calendar from 'icons/calendar'
 import { html, LitElement } from 'lit'
-import { customElement, property } from 'lit/decorators'
-import s from 'litsass:./c-employment-card.scss'
+import { customElement, property } from 'lit/decorators.js'
 import { Employment } from 'src/types'
+import calendar from '../../../public/icons/calendar'
+import '../c-tags'
+import s from './c-employment-card.scss'
 
 @customElement('c-employment-card')
 export class CEmploymentCard extends LitElement {

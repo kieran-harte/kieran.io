@@ -1,10 +1,10 @@
-import 'components/c-tags'
-import github from 'icons/github'
-import youtube from 'icons/youtube'
 import { html, LitElement, nothing } from 'lit'
-import { customElement, property } from 'lit/decorators'
-import s from 'litsass:./c-project-card.scss'
+import { customElement, property } from 'lit/decorators.js'
 import { Project } from 'src/types'
+import github from '../../../public/icons/github'
+import youtube from '../../../public/icons/youtube'
+import '../c-tags'
+import s from './c-project-card.scss'
 
 @customElement('c-project-card')
 export class CProjectCard extends LitElement {

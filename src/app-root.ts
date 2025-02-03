@@ -1,14 +1,13 @@
-// import Router from '@kieranharte/lit-router'
-import 'components/c-about-me'
-import 'components/c-contact'
-import 'components/c-employment-card'
-import 'components/c-hero'
-import 'components/c-project-card'
-import 'components/c-section'
-import 'components/c-skills'
-import { html, LitElement } from 'lit'
-import { customElement } from 'lit/decorators'
-import { employments, projects, skills } from '../data'
+import { LitElement, html } from 'lit'
+import { customElement } from 'lit/decorators.js'
+import './components/c-about-me'
+import './components/c-contact'
+import './components/c-employment-card'
+import './components/c-hero'
+import './components/c-project-card'
+import './components/c-section'
+import './components/c-skills'
+import { employments, projects, skills } from './data'
 
 @customElement('app-root')
 export class AppRoot extends LitElement {
@@ -17,14 +16,12 @@ export class AppRoot extends LitElement {
       <c-hero></c-hero>
       <c-section heading="Projects">
         ${projects.map(
-          (data) => html` <c-project-card .data=${data}></c-project-card> `
+          data => html` <c-project-card .data=${data}></c-project-card> `
         )}
       </c-section>
       <c-section heading="Employment">
         ${employments.map(
-          (data) => html`
-            <c-employment-card .data=${data}></c-employment-card>
-          `
+          data => html` <c-employment-card .data=${data}></c-employment-card> `
         )}
       </c-section>
       <c-section heading="Skills">

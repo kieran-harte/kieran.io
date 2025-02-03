@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
-import { customElement, property } from 'lit/decorators'
-import s from 'litsass:./c-section.scss'
+import { customElement, property } from 'lit/decorators.js'
+import s from './c-section.scss'
 
 @customElement('c-section')
 export class CSection extends LitElement {

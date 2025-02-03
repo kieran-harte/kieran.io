@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
-import { customElement, property } from 'lit/decorators'
-import s from 'litsass:./c-button.scss'
+import { customElement, property } from 'lit/decorators.js'
+import s from './c-button.scss'
 
 @customElement('c-button')
 export class Button extends LitElement {
