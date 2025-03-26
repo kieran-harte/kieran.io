@@ -1,7 +1,5 @@
 import { html } from 'lit-html'
-import download from '../public/icons/download'
 import openInNew from '../public/icons/openInNew'
-import playStore from '../public/icons/playStore'
 import { Employment, Project, Skill } from './types'
 
 export const projects: Project[] = [
