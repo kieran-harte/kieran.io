@@ -65,8 +65,8 @@ export const employments: Employment[] = [
     description: html`I work as a Senior Web Developer at Oxa, a company
       developing software for autonomous vehicles. As part of the Mapping team,
       I am responsible for <b>designing</b>, <b>developing</b>, and
-      <b>maintaining web based tools</b> to build and visualise 3D maps for autonomous
-      vehicles.`,
+      <b>maintaining web based tools</b> to build and visualise <b>3D maps</b> 
+      for autonomous vehicles.`,
     tags: ['React', 'Typescript', 'WebGL', 'C++']
   },
   {
