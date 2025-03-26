@@ -91,7 +91,7 @@
 }
 
 // Outline latest employment
-:host(:last-of-type) {
-	outline: 2px solid #575e7f;
+:host(:first-of-type) {
+	outline: 2px solid #410088;
 	outline-offset: 6px;
 }
