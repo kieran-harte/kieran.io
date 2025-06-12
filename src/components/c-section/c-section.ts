@@ -14,7 +14,7 @@ export class CSection extends LitElement {
 
   render() {
     return html`
-      <h2 class="title">${this.heading}</h2>
+      <!-- <h2 class="title">${this.heading}</h2> -->
       <slot class="items"></slot>
     `
   }

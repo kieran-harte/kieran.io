@@ -15,23 +15,28 @@ export class CHero extends LitElement {
 
   render() {
     return html`
-      <c-section-links></c-section-links>
-      <h1>Kieran Harte</h1>
-      <h2>Senior Web Developer</h2>
-      <c-social-links></c-social-links>
-      <div
+      <!-- <c-section-links></c-section-links> -->
+      <div id="left">
+        <h1>Kieran Harte</h1>
+        <h2>Senior Web Developer</h2>
+        <c-social-links></c-social-links>
+      </div>
+      <div id="right">
+        <c-about-me></c-about-me>
+      </div>
+      <!-- <div
         id="scroll-arrow"
         @click=${() => {
-          document
-            .querySelector('app-root')
-            ?.shadowRoot?.querySelector(`c-section[heading="Projects"]`)
-            ?.scrollIntoView({
-              behavior: 'smooth'
-            })
-        }}
+        document
+          .querySelector('app-root')
+          ?.shadowRoot?.querySelector(`c-section[heading="Projects"]`)
+          ?.scrollIntoView({
+            behavior: 'smooth'
+          })
+      }}
       >
         ${downArrow}
-      </div>
+      </div> -->
     `
   }
 }

@@ -12,20 +12,16 @@ export class CAboutMe extends LitElement {
 
   render() {
     return html`<p>
-        I have a degree in Creative Computing (Web Technologies) from Bath Spa
-        University and I'm currently building web apps as a senior web developer
-        at <a href="https://www.oxa.tech/">Oxa</a> 🚙
-      </p>
-      <br />
-      <p>I am passionate about:</p>
-      <ul>
-        <li>Using web technologies to create native feeling web apps</li>
-        <li>
-          Creating reusable web components (especially with
-          <a href="https://lit.dev">Lit</a>)
-        </li>
-        <li>Self teaching and lifelong learning</li>
-      </ul>`
+      I'm an experienced Senior Web Developer specializing in creating
+      high-performance, interactive web applications. Currently working as a
+      Senior Web Developer at Oxa, focusing on autonomous vehicle 3D mapping
+      tools. I'm passionate about leveraging web technologies to create
+      native-feeling applications and expanding my skill set through
+      self-directed learning. With a First Class degree in Creative Computing
+      from Bath Spa University and a background in freelance projects, I bring a
+      well-rounded skill set, including front-end expertise, 3D web development,
+      and proficiency across multiple languages and frameworks.
+    </p>`
   }
 }
 

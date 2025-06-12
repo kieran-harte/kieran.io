@@ -65,9 +65,22 @@ export const employments: Employment[] = [
     description: html`I work as a Senior Web Developer at Oxa, a company
       developing software for autonomous vehicles. As part of the Mapping team,
       I am responsible for <b>designing</b>, <b>developing</b>, and
-      <b>maintaining web based tools</b> to build and visualise <b>3D maps</b> 
-      for autonomous vehicles.`,
-    tags: ['React', 'Typescript', 'WebGL', 'C++']
+      <b>maintaining web based tools</b> to build and visualise
+      <b>3D maps</b> for autonomous vehicles. I take ownership of key components
+      across the <b>full stack</b> and help
+      <b>hire, onboard, and mentor</b> other developers. I proactively
+      <b>tackle tech debt</b> such as suggesting and leading the refactoring of
+      our codebase to use React Three Fiber and MobX, which reduced the
+      complexity of our code singificant, allowed reusing of the 3D components
+      across other teams, and <b>reduced lines of code by 35%.</b>`,
+    tags: [
+      'React',
+      'Typescript',
+      'MobX',
+      'WebGL / React Three Fiber',
+      'GRPC',
+      'C++'
+    ]
   },
   {
     logo: { src: './images/bsu-logo.png', alt: 'Bath Spa University Logo' },
@@ -112,8 +125,9 @@ export const employments: Employment[] = [
     date: { startEnd: 'Feb - May 2020', duration: '4 months' },
     role: 'Teaching Assistant',
     company: 'Bath Spa University',
-    description: html`I assisted with teaching an introductory web development
-    module, guiding students who were stuck or having technical issues.`,
+    description: html`I assisted with <b>teaching</b> an introductory web
+      development module for undergraduate students, guiding students who were
+      stuck or having technical issues.`,
     tags: ['HTML5', 'CSS', 'JavaScript']
   },
   {
